@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exchange rate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div>
+        <h1 class="title">Currency  Exchange</h1>
+        <div class="exchange-box">
+            <div class="dropdown">
+                <button class="dropbtn" id="from-button"><img class="flag" src="https://w.namu.la/s/82e8f0ba23b7861b4ae69bcf0523076d2151136ad3591c81e8cb49e563a6c46a9faaaa519f1f60a1f581714ddcf63c8c8c22d79c9e93ba0b010ca00663baf829b7bc8efa856ec48a7118284178eb393c69c6dc5c5420946ed59abea255a7863e" width="18px" height="12px">USD</button>
+                <ul class="dropdown-content" id="from-currency-list">
+                <li><a href="#"><img class="flag" src="https://w.namu.la/s/82e8f0ba23b7861b4ae69bcf0523076d2151136ad3591c81e8cb49e563a6c46a9faaaa519f1f60a1f581714ddcf63c8c8c22d79c9e93ba0b010ca00663baf829b7bc8efa856ec48a7118284178eb393c69c6dc5c5420946ed59abea255a7863e" width="18px" height="12px">USD</a></li>
+                    <li><a href="#"><img class="flag" src="https://w.namu.la/s/43a07e65f573eb41fffe67ac0d1008fa73b5c7a04a004ff9004ddf0680524c5c5bd8a30c724fd7966bd7d3a2f60d0bd17c3cc159dd41f704f9b6dc188a21346dcf6aed9b29d4349c28d0fe50f74fcbe2c48ee4eccfb75136d68f5cde27f4b09a" width="18px" height="12px">KRW</a></li>
+                    <li><a href="#"><img class="flag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAeFBMVEX///+8AC22AAC7ACq5AB26ACG7ACX++vu4AA24ABG5ABm5ABv+/Pzx1drOcHe7Eifmt7zy297qwce8Gy/rx8vfp6rDOE356+3alpv68PL25efdn6XVi43TfYLQdnzGRlnITl3KXmfBNETFTVbDRk3JVWPHWF++LDdX00ngAAACi0lEQVR4nO2bi5KqMAxAsbS83+IKIqLruv7/H166zN7VXVEenYbM5HzBmU5Ik5AaBkEQBEEQBEEQBEEQBBaCwLaDANpiDHaYVPv6EEWHel8loQ3tM4AyrZprLHyfcyE4930RX5sqLaG9nhIWZ+ZY5uoO03LYcR9Cu/Vh50fuW6uHWD4/5ouMluzExGPnDsFOGbTjH9KL23PQN0fuXlJoz3uqmL+SlvC4gja9Yffpmq+dJab7uYO2/SZ894ZJS7z3heSUhL2M6lsslkAbSzJvYID8DxRvARklYSOtW2/4887FaOvWW+Sw1qkzwbr1dkATeHl+ejH2I86QxVU0IvPd40Vw1hmbar1aMbB0sr1OCuwO87oF0i4mh4jEK2CsdzNCRMJgqpODP0/bP0BYh+sZkS0x1xBF1bzIlkBEd/C7051w3Kb+7nJOzv6G6S9NoonX+i1C+1VZfsyOkTZKPnRXJvmojqYPS3eUbFwV2u5Gs3Y0aMDwCq47uN/UBMmbXutg6GDkOaardwK+VZC1JUxv9Zqq0tbbU+aqtPVWUyqu9i9tva0ZaetEWWzrvd2RZhKkeRvpLYm0JsFaAW4cFdra622k3Q3SXhJp567kngSYk9gKplIWwM4Dzhkg1omrcZh53B7IfBvr3wSk/26M3bw/ZWCLJTj/S875KoG+xw6k/9yRbjhg3SfBur3TphM+dleKL2BXqj1vZ9xmmrOAs5bg3ANsr8vT8K3L02K2Lg2kO64G1o3iluzyfGnUYpdFZJDf2HnDvf5t+WaZ2/KSsDg+epvgsqZYTP54iHwJso6F73UvQbyvlyDFwl+CdJRhUhV1HUV1XSB5d/ODfOUE7UAQBEEQBEEQBEEQBDGcf6ysKSqK2rjgAAAAAElFTkSuQmCC" width="18px" height="12px">JPY</a></li>
+                <li><a href="#"><img class="flag" src="https://w.namu.la/s/af7b5230d02ee3d208f9ecd43670b27a4d49ab08bf387a4b49ec215a4bda3d2c549a29921155e3cb44e0a303dfd8e6f167f90a1b6bd3b3133e6cabd25c8082b8cf8689b504b8c61288ab403a746520ae8f8a4baa7bb9dd2e776558b1e9f798a6" width="18px" height="12px">VND</a></li>
+                </ul>
+            </div>
+            <div class="input-area">
+                <input type="number" id="from-input" onkeyup="convert()" placeholder="금액을 입력하세요">
+                <div id="fromNumToKorea" class="Number">달러</div>
+            </div>
+        </div>
+        <h1 class="simbol">=</h1>
+        <div class="exchange-box">
+            <div class="dropdown">
+                <button class="dropbtn" id="to-button"><img class="flag" src="https://w.namu.la/s/82e8f0ba23b7861b4ae69bcf0523076d2151136ad3591c81e8cb49e563a6c46a9faaaa519f1f60a1f581714ddcf63c8c8c22d79c9e93ba0b010ca00663baf829b7bc8efa856ec48a7118284178eb393c69c6dc5c5420946ed59abea255a7863e" width="18px" height="12px">USD</button>
+                <ul class="dropdown-content" id="to-currency-list">
+                    <li><a href="#"><img class="flag" src="https://w.namu.la/s/82e8f0ba23b7861b4ae69bcf0523076d2151136ad3591c81e8cb49e563a6c46a9faaaa519f1f60a1f581714ddcf63c8c8c22d79c9e93ba0b010ca00663baf829b7bc8efa856ec48a7118284178eb393c69c6dc5c5420946ed59abea255a7863e" width="18px" height="12px">USD</a></li>
+                    <li><a href="#"><img class="flag" src="https://w.namu.la/s/43a07e65f573eb41fffe67ac0d1008fa73b5c7a04a004ff9004ddf0680524c5c5bd8a30c724fd7966bd7d3a2f60d0bd17c3cc159dd41f704f9b6dc188a21346dcf6aed9b29d4349c28d0fe50f74fcbe2c48ee4eccfb75136d68f5cde27f4b09a" width="18px" height="12px">KRW</a></li>
+                    <li><a href="#"><img class="flag" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAeFBMVEX///+8AC22AAC7ACq5AB26ACG7ACX++vu4AA24ABG5ABm5ABv+/Pzx1drOcHe7Eifmt7zy297qwce8Gy/rx8vfp6rDOE356+3alpv68PL25efdn6XVi43TfYLQdnzGRlnITl3KXmfBNETFTVbDRk3JVWPHWF++LDdX00ngAAACi0lEQVR4nO2bi5KqMAxAsbS83+IKIqLruv7/H166zN7VXVEenYbM5HzBmU5Ik5AaBkEQBEEQBEEQBEEQBBaCwLaDANpiDHaYVPv6EEWHel8loQ3tM4AyrZprLHyfcyE4930RX5sqLaG9nhIWZ+ZY5uoO03LYcR9Cu/Vh50fuW6uHWD4/5ouMluzExGPnDsFOGbTjH9KL23PQN0fuXlJoz3uqmL+SlvC4gja9Yffpmq+dJab7uYO2/SZ894ZJS7z3heSUhL2M6lsslkAbSzJvYID8DxRvARklYSOtW2/4887FaOvWW+Sw1qkzwbr1dkATeHl+ejH2I86QxVU0IvPd40Vw1hmbar1aMbB0sr1OCuwO87oF0i4mh4jEK2CsdzNCRMJgqpODP0/bP0BYh+sZkS0x1xBF1bzIlkBEd/C7051w3Kb+7nJOzv6G6S9NoonX+i1C+1VZfsyOkTZKPnRXJvmojqYPS3eUbFwV2u5Gs3Y0aMDwCq47uN/UBMmbXutg6GDkOaardwK+VZC1JUxv9Zqq0tbbU+aqtPVWUyqu9i9tva0ZaetEWWzrvd2RZhKkeRvpLYm0JsFaAW4cFdra622k3Q3SXhJp567kngSYk9gKplIWwM4Dzhkg1omrcZh53B7IfBvr3wSk/26M3bw/ZWCLJTj/S875KoG+xw6k/9yRbjhg3SfBur3TphM+dleKL2BXqj1vZ9xmmrOAs5bg3ANsr8vT8K3L02K2Lg2kO64G1o3iluzyfGnUYpdFZJDf2HnDvf5t+WaZ2/KSsDg+epvgsqZYTP54iHwJso6F73UvQbyvlyDFwl+CdJRhUhV1HUV1XSB5d/ODfOUE7UAQBEEQBEEQBEEQBDGcf6ysKSqK2rjgAAAAAElFTkSuQmCC" width="18px" height="12px">JPY</a></li>
+                <li><a href="#"><img class="flag" src="https://w.namu.la/s/af7b5230d02ee3d208f9ecd43670b27a4d49ab08bf387a4b49ec215a4bda3d2c549a29921155e3cb44e0a303dfd8e6f167f90a1b6bd3b3133e6cabd25c8082b8cf8689b504b8c61288ab403a746520ae8f8a4baa7bb9dd2e776558b1e9f798a6" width="18px" height="12px">VND</a></li>
+                </ul>
+            </div>
+            <div class="input-area">
+                <input type="number" id="to-input" onkeyup="reconvert()">
+                <div id="toNumToKorea" class="Number">달러</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
